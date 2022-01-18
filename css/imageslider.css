@@ -1,0 +1,136 @@
+.wrapperforslideradobe{
+    position:absolute;
+    width:100%;
+    left:50%;
+    right:50%;
+    margin:auto;
+    top:50%;
+    transform: scale(0.7);
+    transform: translate(-50%,-50%);
+    padding-bottom: 56.25%;
+}
+
+
+.gallery-cell {
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+    counter-increment: gallery-cell;
+    border-width: 0px;
+    display: flex;
+    border-color:black;
+    justify-content: center;
+    align-content: center;
+    align-items:center;
+  }
+  
+  .gallery-cell:before {
+    display: block;
+    height:100%;
+    width:100%;
+    text-align: center;
+    border-width: 0px;
+    border-color:black;
+    content: counter(gallery-cell);
+    line-height: 0%;
+    font-size: 80px;
+    color: rgb(0, 0, 0);
+  }
+
+#one {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0%;
+    border-color:black;
+    background-repeat: no-repeat;
+    border-width: 0px;
+    background-size: 100%;
+    color: transparent;
+    image-rendering: crisp-edges;
+    background-image: url("../img/sp.png");
+}
+
+#two {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0%;
+    background-repeat: no-repeat;
+    color: transparent;
+    border-width: 0px;
+    border-color:black;
+    background-size: 100%;
+    image-rendering: crisp-edges;
+    background-image: url("../img/unity1.png");
+}
+
+#three {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-color:black;
+    color: transparent;
+    border-width: 0px;
+    image-rendering: crisp-edges;
+    background-image: url("../img/unity2.png");
+}
+
+#four {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0%;
+    background-repeat: no-repeat;
+    border-color:black;
+    background-size: 100%;
+    border-width: 0px;
+    color: transparent;
+    image-rendering: crisp-edges;
+    background-image: url("../img/unity3.png");
+}
+
+#five {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0%;
+    background-repeat: no-repeat;
+    border-color:black;
+    background-size: 100%;
+    border-width: 0px;
+    color: transparent;
+    image-rendering: crisp-edges;
+    background-image: url("../img/unity4.png");
+}
+
+#six {
+    position: fixed;
+    width:100%;
+    height:100.1%;
+    top:0%;
+    background-repeat: no-repeat;
+    border-color:black;
+    background-size: 100%;
+    border-width: 0px;
+    color: transparent;
+    image-rendering: crisp-edges;
+    background-image: url("../img/drago.png");
+}
+
+#seven {
+    position: fixed;
+    width:100%;
+    height:100.1%;
+    top:0%;
+    background-repeat: no-repeat;
+    border-color:black;
+    background-size: 100%;
+    border-width: 0px;
+    image-rendering: crisp-edges;
+    color: transparent;
+    background-image: url("../img/fox.png");
+}

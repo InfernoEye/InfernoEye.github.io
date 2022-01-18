@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<head>
+  <title>Portfolio</title>
+    <meta charset="utf-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/workimages.css">
+    <link rel="stylesheet" href="css/photomash.css">
+    <link rel="stylesheet" href="css/imageslider.css">
+    <link rel="stylesheet" href="css/flickity.css">
+    <link rel="stylesheet" href="css/about.css">
+    <script src="flickity.pkgd.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jquery.fittext.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script type="text/javascript">
+        $('#container').css('opacity', 0);
+        $(window).on('load', function() {
+          $('#container').css('opacity', 1);
+        });
+    </script>
+    <script type="text/javascript">
+      function over(){
+        document.getElementById("name").style.color = "white";
+      }
+      function out(){
+        document.getElementById("name").style.color = "black";
+      }
+      function overbuttonleft() {
+        document.getElementById("left").style.opacity = "0.55";
+      }
+      function outbuttonleft() {
+        document.getElementById("left").style.opacity = "0.4";
+      }
+      function overbuttonright() {
+        document.getElementById("right").style.opacity = "0.55";
+      }
+      function outbuttonright() {
+        document.getElementById("right").style.opacity = "0.4";
+      }
+    </script>
+    <script type="text/javascript">
+(function () {
+
+
+let SSWZ = function () {
+
+    /**
+     * @param e
+     */
+    this.keyScrollHandler = function (e) {
+        if (e.ctrlKey) {
+            e.preventDefault();
+            return false;
+        }
+    }
+};
+
+if (window === top) {
+    let sswz = new SSWZ();
+    window.addEventListener('wheel', sswz.keyScrollHandler, { passive: false });
+}
+
+})();
+    </script>
+    <script >
+     $(document).ready(function(){
+    $(this).scrollTop(0);});
+    </script>
+    <script type="text/javascript">
+      function photo() {
+        var working = document.getElementById("photomash");
+        document.getElementById("buttonblocker").style.visibility = "hidden"
+        working.style.visibility = "visible";
+        
+        var op = 0.1;
+        working.style.display = 'block';
+        var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        working.style.opacity = op;
+        working.style.filter = 'alpha(opacity=' + op * 100 + ")";    
+        op += op * 0.1;
+    }, 8);
+      }
+
+      function work() {
+        var working = document.getElementById("workimages");
+        working.style.visibility = "visible";
+        document.getElementById("Portfolio").style.visibility = "hidden";
+        
+        var op = 0.1;
+        working.style.display = 'block';
+        var timer = setInterval(function () {
+        if (op >= 1){
+            photo();
+            clearInterval(timer);
+        }
+        working.style.opacity = op;
+        working.style.filter = 'alpha(opacity=' + op * 100 + ")";    
+        op += op * 0.1;
+    }, 6);
+      }
+
+      function workback() {
+        var working = document.getElementById("workimages");
+        document.getElementById("buttonblocker").style.visibility = "visible"
+        document.getElementById("Portfolio").style.visibility = "visible";
+
+        var op = 1;  // initial opacity
+        var timer = setInterval(function () {
+        if (op <= 0.001){
+            clearInterval(timer);
+            working.style.display = 'none';
+            working.style.visibility = "hidden";
+        }
+        working.style.opacity = op;
+        working.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;}, 4);
+}
+
+function photoback() {
+        var working = document.getElementById("photomash");
+        document.getElementById("buttonblocker").style.visibility = "visible"
+        document.getElementById("Portfolio").style.visibility = "visible";
+
+        var op = 1;  // initial opacity
+        var timer = setInterval(function () {
+        if (op <= 0.001){
+            clearInterval(timer);
+            working.style.display = 'none';
+            working.style.visibility = "hidden";
+            workback();
+        }
+        working.style.opacity = op;
+        working.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;}, 4);
+}
+
+    </script>
+    <script>
+            function about() {
+        var working = document.getElementById("about");
+        document.getElementById("buttonblocker").style.visibility = "hidden"
+        working.style.visibility = "visible";
+        
+        var op = 0.1;
+        working.style.display = 'block';
+        var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        working.style.opacity = op;
+        working.style.filter = 'alpha(opacity=' + op * 100 + ")";    
+        op += op * 0.1;
+    }, 8);
+      }
+
+      function work1() {
+        var working = document.getElementById("workimages1");
+        working.style.visibility = "visible";
+        document.getElementById("Portfolio").style.visibility = "hidden";
+        document.getElementById("aboutinfo").style.opacity = "1"
+        
+        var op = 0.1;
+        working.style.display = 'block';
+        var timer = setInterval(function () {
+        if (op >= 1){
+            about();
+            clearInterval(timer);
+        }
+        working.style.opacity = op;
+        working.style.filter = 'alpha(opacity=' + op * 100 + ")";    
+        op += op * 0.1;
+    }, 6);
+      }
+
+      function work1back() {
+        var working = document.getElementById("workimages1");
+        document.getElementById("buttonblocker").style.visibility = "visible"
+        document.getElementById("Portfolio").style.visibility = "visible";
+        document.getElementById("aboutinfo").style.opacity = "0"
+
+        var op = 1;  // initial opacity
+        var timer = setInterval(function () {
+        if (op <= 0.001){
+            clearInterval(timer);
+            working.style.display = 'none';
+            working.style.visibility = "hidden";
+        }
+        working.style.opacity = op;
+        working.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;}, 6);
+}
+
+function aboutback() {
+        var working = document.getElementById("about");
+        document.getElementById("buttonblocker").style.visibility = "visible"
+        document.getElementById("Portfolio").style.visibility = "visible";
+
+        var op = 1;  // initial opacity
+        var timer = setInterval(function () {
+        if (op <= 0.001){
+            clearInterval(timer);
+            working.style.display = 'none';
+            working.style.visibility = "hidden";
+            work1back();
+        }
+        working.style.opacity = op;
+        working.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;}, 4);
+}
+
+    </script>
+</head>
+<body >
+  <div class="content">
+    <div id="Portfolio">  
+      <div id="info">
+        <a href="https://www.linkedin.com/in/dominik-nowak-1b134b226" target="_blank" class="enlarge">linkedin</a><br>
+        <a href="https://www.instagram.com/_im_off_the_line_/" target="_blank" class="enlarge">instagram</a><br>
+        <a href="https://t.me/JustACuteBoy/" target="_blank" class="enlarge">telegram</a>
+      </div>
+      <div id="work" style="width: 200px;">
+        <a class="enlarge" onclick="work()">projects</a><br>
+        <a class="enlarge" onclick="work1()">about me</a><br>
+      </div>
+      <div id="circle" onmouseover="over()" onmouseout="out()">
+      <div id="name">Dominik<br>Nowak</div>
+</div>
+</div>
+<div id="workimages"></div>
+<div id="photomash">
+  <div id="imagess">
+
+   <div class="wrapperforslideradobe">
+      <div class="gallery js-flickity" js-flickity data-flickity-options='{ "wrapAround": true }' style="position:absolute; width:80%; height:76%; left:50%;  right:50%; margin:auto; top:50%; transform: translate(-50%,-50%);">
+        <div class="gallery-cell" style="border-color: black;"><img id="one" style="border-color: black;"></div>
+        <div class="gallery-cell" style="border-color: black;"><img id="two" style="border-color: black;"></div>
+        <div class="gallery-cell" style="border-color: black;"><img id="three" style="border-color: black;"></div>
+        <div class="gallery-cell" style="border-color: black;"><img id="four" style="border-color: black;"></div>
+        <div class="gallery-cell" style="border-color: black;"><img id="five" style="border-color: black;"></div>
+        <div class="gallery-cell" style="border-color: black;"><img id="six" style="border-color: black;"></div>
+        <div class="gallery-cell" style="border-color: black;"><img id="seven" style="border-color: black;"></div>
+      </div>
+  </div>
+ </div>
+ <div id="gobackbutton" onclick="photoback()"><div id="gobackbuttonsmol"></div>
+</div>
+
+
+
+
+</div>
+<div id= "workimages1"></div>
+<div id="about">
+  <div id="aboutinfo">
+    My name is Dominik and I am a begginer web designer from Zawiercie located in Poland.
+    I am interested in web development as well as diagnostics of personal computers.
+    My hobby is custom personal computers builds, work on VRChat avatars and paint textures for 3D models.
+    I am currently studying IT in Faculty of Science and Technology, University of Silesia.
+    
+  </div>
+  <div id="gobackbutton" onclick="aboutback()"><div id="gobackbuttonsmol"></div></div>
+  <div id="me"><div id="me1"></div></div>
+</div>
+
+<script>
+  jQuery("#aboutinfo").fitText(4);
+</script>
+
+<div id="buttonblocker"></div>
+</div>
+<div class="loader-wrapper">
+  <span class="loader"><span class="loader-inner"></span></span>
+</div>
+<script>
+    $(window).on("load",function(){
+      $(".loader-wrapper").fadeOut("slow");
+    });
+</script>
+</body>
